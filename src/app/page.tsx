@@ -178,14 +178,20 @@ export default function Home() {
 
           {/* Spacer to push mobile button right */}
           <div className="flex items-center gap-3 ml-auto">
+            <a
+              href="tel:+17275098278"
+              className="hidden sm:inline-block lg:hidden px-4 py-2 text-sm font-semibold rounded bg-gold text-navy hover:brightness-110 transition"
+            >
+              (727) 509-8278
+            </a>
             <button
               className="block text-white text-2xl p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
               <div className="flex flex-col gap-1.5">
-                <span className="block w-6 h-px bg-white"></span>
-                <span className="block w-6 h-px bg-white"></span>
+                <span className="block w-6 h-px bg-white lg:w-8"></span>
+                <span className="block w-6 h-px bg-white lg:w-8"></span>
               </div>
             </button>
           </div>
@@ -329,33 +335,33 @@ export default function Home() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(135deg, rgba(14,42,71,0.85) 0%, rgba(14,42,71,0.5) 50%, rgba(0,0,0,0.3) 100%)",
+                "linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.05) 100%)",
             }}
           />
 
           {/* Hero content */}
-          <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-32 md:py-40">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 pt-10 pb-32 md:pt-14 md:pb-40">
             <p className="text-sm md:text-base uppercase tracking-[0.2em] text-gold mb-4">
               24/7 Medical Detox &amp; Residential Inpatient
             </p>
-            <h1 className="font-maistra text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+            <h1 className="font-maistra text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight max-w-2xl">
               Top-rated Addiction Treatment
             </h1>
-            <hr className="border-t-2 border-gold w-20 mb-6" />
-            <p className="text-lg md:text-xl max-w-2xl text-white/75 mb-10 leading-relaxed">
+            <hr className="border-t-2 border-gold w-64 mb-6" />
+            <p className="text-2xl max-w-2xl text-white/75 mb-10 leading-relaxed">
               One call handles everything: free assessment, travel coordination,
               and same-day admission. Available 24/7.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 items-start">
               <a
                 href="tel:+17275098278"
                 className="inline-block px-8 py-4 text-center font-semibold rounded bg-gold text-navy hover:brightness-110 transition"
               >
-                <span className="text-lg">(727) 509-8278</span>
+                <span className="text-xl uppercase">(727) 509-8278</span>
                 <br />
-                <span className="text-sm font-normal">
+                <span className="text-base font-normal uppercase">
                   Call for Free Assessment
                 </span>
               </a>
@@ -363,98 +369,46 @@ export default function Home() {
                 href="#verify-form"
                 className="inline-block px-8 py-4 text-center font-semibold rounded border-2 border-white text-white hover:bg-white/10 transition"
               >
-                VERIFY YOUR BENEFITS
+                <span className="text-xl uppercase">VERIFY YOUR BENEFITS</span>
                 <br />
-                <span className="text-sm font-normal text-white/75">
+                <span className="text-base font-normal text-white/75 uppercase">
                   Quick &amp; Confidential
                 </span>
               </a>
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap gap-6 md:gap-10">
-              <div className="flex items-center gap-2 text-white/90">
-                <svg
-                  className="text-gold shrink-0"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
+            <div className="flex flex-wrap gap-8 md:gap-12">
+              <div className="flex flex-col items-center gap-2 text-white/90">
+                <svg className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                   <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                 </svg>
-                <span className="text-xs md:text-sm uppercase tracking-wider">
-                  100% CONFIDENTIAL
-                </span>
+                <span className="text-xs md:text-sm uppercase tracking-wider text-center">100% CONFIDENTIAL</span>
               </div>
-              <div className="flex items-center gap-2 text-white/90">
-                <svg
-                  className="text-gold shrink-0"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
+              <div className="flex flex-col items-center gap-2 text-white/90">
+                <svg className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M2 4v16" />
                   <path d="M2 8h18a2 2 0 0 1 2 2v10" />
                   <path d="M2 17h20" />
                   <path d="M6 8v9" />
                 </svg>
-                <span className="text-xs md:text-sm uppercase tracking-wider">
-                  Same-Day Admission
-                </span>
+                <span className="text-xs md:text-sm uppercase tracking-wider text-center">Same-Day Admission</span>
               </div>
-              <div className="flex items-center gap-2 text-white/90">
-                <svg
-                  className="text-gold shrink-0"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
+              <div className="flex flex-col items-center gap-2 text-white/90">
+                <svg className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   <path d="M12 8v8" />
                   <path d="M8 12h8" />
                 </svg>
-                <span className="text-xs md:text-sm uppercase tracking-wider">
-                  24/7 Clinical Staff
-                </span>
+                <span className="text-xs md:text-sm uppercase tracking-wider text-center">24/7 Clinical Staff</span>
               </div>
-              <div className="flex items-center gap-2 text-white/90">
-                <svg
-                  className="text-gold shrink-0"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
+              <div className="flex flex-col items-center gap-2 text-white/90">
+                <svg className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   <polyline points="9 12 11 14 15 10" />
                 </svg>
-                <span className="text-xs md:text-sm uppercase tracking-wider">
-                  INSURANCE ACCEPTED
-                </span>
+                <span className="text-xs md:text-sm uppercase tracking-wider text-center">INSURANCE ACCEPTED</span>
               </div>
             </div>
           </div>
@@ -464,16 +418,16 @@ export default function Home() {
         <section className="bg-navy py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
             {/* Left — Blockquote */}
-            <div>
-              <blockquote className="font-cormorant text-2xl md:text-3xl lg:text-4xl italic text-white leading-relaxed mb-8">
+            <div className="relative pl-8 border-l-2 border-white/20">
+              <blockquote className="font-maistra italic font-normal text-white leading-tight mb-8" style={{fontSize: "3rem"}}>
                 &ldquo;We don&rsquo;t just treat symptoms; we build the
                 foundation for a life you actually want to live.&rdquo;
               </blockquote>
               <div>
-                <strong className="text-gold text-lg">
+                <strong className="text-white text-sm tracking-[0.2em] uppercase">
                   Patrick Santosuosso
                 </strong>
-                <p className="text-white/60 text-sm mt-1">
+                <p className="text-white/60 text-xs tracking-[0.15em] uppercase mt-1">
                   CEO &amp; Co-Founder
                 </p>
               </div>
@@ -488,26 +442,20 @@ export default function Home() {
                     key={step.number}
                     className="rounded-lg overflow-hidden cursor-pointer transition-all duration-300"
                     style={{
-                      backgroundColor: isActive
-                        ? "var(--navy-light)"
-                        : "transparent",
-                      border: isActive
-                        ? "1px solid var(--gold)"
-                        : "1px solid rgba(255,255,255,0.15)",
-                      borderLeft: isActive
-                        ? "3px solid var(--gold)"
-                        : "1px solid rgba(255,255,255,0.15)",
+                      backgroundColor: isActive ? "rgba(42,82,152,0.4)" : "rgba(255,255,255,0.04)",
+                      border: "1px solid rgba(255,255,255,0.12)",
+                      borderLeft: isActive ? "3px solid var(--gold)" : "1px solid rgba(255,255,255,0.12)",
                     }}
                     onClick={() =>
                       setActiveStep(isActive ? null : i)
                     }
                   >
-                    <div className="flex items-center justify-between p-5">
+                    <div className="flex items-center justify-between px-6 py-5">
                       <div className="flex items-center gap-4">
-                        <span className="text-gold font-maistra text-xl">
+                        <span className="text-white/30 font-cormorant italic text-4xl leading-none">
                           {step.number}
                         </span>
-                        <h2 className="font-maistra text-lg md:text-xl text-white">
+                        <h2 className="text-base font-semibold text-white tracking-wide">
                           {step.title}
                         </h2>
                       </div>
@@ -529,7 +477,7 @@ export default function Home() {
                         opacity: isActive ? 1 : 0,
                       }}
                     >
-                      <div className="px-5 pb-5">
+                      <div className="px-6 pb-6">
                         <p className="text-white/75 mb-3">
                           {step.description}
                         </p>
