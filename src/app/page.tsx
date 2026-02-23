@@ -507,12 +507,20 @@ export default function Home() {
             <span className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block">
               Coast to Coast Locations
             </span>
-            <h2 className="font-maistra text-3xl md:text-5xl text-white mb-12">
-              Insurance-Covered Addiction Treatment
-            </h2>
 
-            {/* Two gallery images */}
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {/* Row 1: Big title left, image right */}
+            <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start mb-16">
+              <div>
+                <h2 className="font-maistra text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+                  Insurance-Covered Addiction Treatment
+                </h2>
+                <p className="text-white/75 text-xl leading-relaxed">
+                  Our inpatient treatment centers specialize in immediate placement for individuals nationwide.
+                </p>
+                <p className="text-white/75 text-xl leading-relaxed mt-4">
+                  A wide range of critical recovery services, including acute medical detoxification and residential care.
+                </p>
+              </div>
               <Image
                 src="/images/gallery/amity-family.jpg"
                 alt="Inpatient drug and alcohol detox"
@@ -522,6 +530,46 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="rounded-lg w-full h-auto object-cover"
               />
+            </div>
+
+            {/* Row 2: Image left, text right */}
+            <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start">
+              <div>
+                <span className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block">
+                  Insurance Coverage
+                </span>
+                <h3 className="font-maistra text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+                  We Work With All Major Insurers
+                </h3>
+                <p className="text-white/75 text-lg leading-relaxed mb-8">
+                  We prioritize accessible treatment with a streamlined intake
+                  process, 24/7 nursing support, and a community-based setting
+                  designed for rapid stabilization.
+                </p>
+                <ul className="space-y-3 mb-10">
+                  {[
+                    "24/7 Withdrawals Management",
+                    "Multiple Locations",
+                    "30, 60, or 90-Day Programs",
+                    "Insurance May Cover up to 100%",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-3 text-white text-lg">
+                      <svg className="w-5 h-5 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="tel:+17275098278"
+                  className="inline-block px-8 py-4 text-center font-semibold rounded bg-gold text-navy hover:brightness-110 transition"
+                >
+                  <span className="text-lg">(727) 509-8278</span>
+                  <br />
+                  <span className="text-sm font-normal">Call for Free Assessment</span>
+                </a>
+              </div>
               <Image
                 src="/images/gallery/amity-group-therapy.jpg"
                 alt="Relapse prevention program"
@@ -529,60 +577,8 @@ export default function Home() {
                 height={400}
                 quality={80}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="rounded-lg w-full h-auto object-cover"
+                className="rounded-lg w-full h-auto object-cover md:order-first"
               />
-            </div>
-
-            <div className="max-w-2xl">
-              <p className="text-white/75 text-lg leading-relaxed mb-8">
-                Our inpatient treatment centers specialize in immediate placement
-                for individuals nationwide.
-                <br />
-                <br />
-                A wide range of critical recovery services, including acute
-                medical detoxification and residential care.
-                <br />
-                <br />
-                We prioritize accessible treatment with a streamlined intake
-                process, 24/7 nursing support, and a community-based setting
-                designed for rapid stabilization.
-              </p>
-
-              <ul className="space-y-3 mb-10">
-                {[
-                  "24/7 Withdrawals Management",
-                  "Multiple Locations",
-                  "30, 60, or 90-Day Programs",
-                  "Insurance May Cover up to 100%",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 text-white text-lg"
-                  >
-                    <svg
-                      className="w-5 h-5 text-gold shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href="tel:+17275098278"
-                className="inline-block px-8 py-4 text-center font-semibold rounded bg-gold text-navy hover:brightness-110 transition"
-              >
-                <span className="text-lg">(727) 509-8278</span>
-                <br />
-                <span className="text-sm font-normal">
-                  Call for Free Assessment
-                </span>
-              </a>
             </div>
           </div>
         </section>
@@ -601,7 +597,7 @@ export default function Home() {
           </div>
           <div className="relative max-w-4xl mx-auto px-4 md:px-8 text-center">
             <blockquote
-              className="font-cormorant text-xl md:text-2xl lg:text-3xl italic leading-relaxed mb-8"
+              className="font-cormorant text-3xl md:text-4xl lg:text-5xl italic leading-relaxed mb-8"
               style={{ color: "#2a3a4e" }}
             >
               &ldquo;Discharge is not the end; it is a clinical transition. We
