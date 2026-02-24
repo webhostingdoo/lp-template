@@ -3,7 +3,8 @@
     "allow": [
       "Bash(cd O:\\\\Amity-BH\\\\amity-lander:*)",
       "Bash(curl:*)",
-      "Bash(head:*)"
+      "Bash(head:*)",
+      "Bash(tail:*)"
     ]
   }
 }
