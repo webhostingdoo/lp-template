@@ -205,7 +205,7 @@ export default function Home() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-xs tracking-[0.15em] uppercase text-white/75 hover:text-white transition-colors"
+                  className={`nav-link text-base tracking-[0.05em] text-white/75 hover:text-white transition-colors ${activeLink === link.href ? 'active' : ''}`}
                 >
                   {link.label}
                 </a>
