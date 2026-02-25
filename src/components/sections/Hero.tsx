@@ -1,27 +1,22 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative min-h-[100svh] flex items-start">
-      {/* Background picture element with 3 sources */}
-      <picture className="absolute inset-0 w-full h-full">
-        <source
-          media="(min-width: 1440px)"
-          srcSet="/images/hero/amity-2-4k.jpg"
-        />
-        <source
-          media="(min-width: 768px)"
-          srcSet="/images/hero/amity-2-desktop.jpg"
-        />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/hero/amity-2-mobile.jpg"
+      {/* Background image */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/images/hero/amity-2-desktop.jpg"
           alt="Amity Palm Beach treatment center in California"
-          className="w-full h-full object-cover"
-          fetchPriority="high"
+          fill
+          priority
+          quality={85}
+          className="object-cover"
           sizes="100vw"
         />
-      </picture>
+      </div>
 
       {/* Dark gradient overlay */}
       <div

@@ -4,7 +4,9 @@
       "Bash(cd O:\\\\Amity-BH\\\\amity-lander:*)",
       "Bash(curl:*)",
       "Bash(head:*)",
-      "Bash(tail:*)"
+      "Bash(tail:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)"
     ]
   }
 }
