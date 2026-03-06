@@ -35,7 +35,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 lg:px-8 py-9">
           <a href="#" className="shrink-0">
             <Image
-              src="/images/logos/amity-logo.png"
+              src="/images/logos/tru_dallas_logo_nav.svg"
               alt="Tru Dallas Detox"
               width={250}
               height={50}
@@ -122,7 +122,7 @@ export default function Header() {
               />
               {/* Mobile top bar over image */}
               <div className="absolute inset-x-0 top-0 flex items-center justify-between px-4 py-3 bg-navy/80">
-                <img src="/images/logos/amity-logo.png" alt="Tru Dallas Detox" className="h-8 w-auto" />
+                <img src="/images/logos/tru_dallas_logo_nav.svg" alt="Tru Dallas Detox" className="h-8 w-auto" />
                 <a href="tel:+18669717393" className="px-4 py-2 text-sm font-semibold bg-navy text-white rounded">
                   (866) 971-7393
                 </a>
@@ -132,7 +132,7 @@ export default function Header() {
 
             {/* Desktop logo area */}
             <div className="hidden lg:flex items-start gap-3 px-10 pt-10 pb-6">
-              <img src="/images/logos/amity-logo.png" alt="Tru Dallas Detox" className="h-10 w-auto" />
+              <img src="/images/logos/tru_dallas_logo_nav.svg" alt="Tru Dallas Detox" className="h-10 w-auto" />
             </div>
 
             {/* Title + stars - desktop only */}

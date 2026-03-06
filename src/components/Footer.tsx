@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-10">
           {/* Left: Logo + certifications */}
           <div>
-            <Image src="/images/logos/amity-logo.png" alt="Tru Dallas Detox" width={250} height={50} quality={80} className="w-[200px] h-auto mb-6" />
+            <Image src="/images/logos/tru_dallas_logo_white.svg" alt="Tru Dallas Detox" width={250} height={50} quality={80} className="w-[200px] h-auto mb-6" />
             <p className="text-white/50 text-sm mb-2">Licensed and Certified by:</p>
             <p className="text-white/75 text-sm mb-1">The Joint Commission Accredited</p>
             <p className="text-white/75 text-sm mb-4">LegitScript Certified</p>
