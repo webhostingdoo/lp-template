@@ -32,15 +32,15 @@ export default function Header() {
         }`}
       >
         {/* Top bar */}
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 lg:px-8 py-9">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 lg:px-8 py-5">
           <a href="#" className="shrink-0">
             <Image
               src="/images/logos/tru_dallas_logo_nav.svg"
               alt="Tru Dallas Detox"
-              width={250}
-              height={50}
+              width={120}
+              height={40}
               priority
-              className="w-[180px] md:w-[250px] h-auto"
+              className="w-28 h-auto"
             />
           </a>
 
