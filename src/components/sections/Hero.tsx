@@ -7,13 +7,24 @@ export default function Hero() {
     <section className="relative min-h-[100svh] flex items-start">
       {/* Background image */}
       <div className="absolute inset-0 w-full h-full">
+        {/* Mobile image - shown below 768px */}
         <Image
-          src="/images/hero/amity-2-desktop.jpg"
-          alt="Amity Palm Beach treatment center in California"
+          src="/images/hero/tdd-hero-mobile.jpg"
+          alt="True Dallas Detox treatment center"
           fill
           priority
           quality={85}
-          className="object-cover"
+          className="object-cover md:hidden"
+          sizes="100vw"
+        />
+        {/* Desktop image - shown at 768px and above */}
+        <Image
+          src="/images/hero/tdd-hero-desktop.jpg"
+          alt="True Dallas Detox treatment center"
+          fill
+          priority
+          quality={85}
+          className="object-cover hidden md:block"
           sizes="100vw"
         />
       </div>

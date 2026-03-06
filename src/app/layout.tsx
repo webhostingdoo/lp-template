@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Drug & Alcohol Detox and Rehab Treatment Centers",
     description:
       "Amity Palm Beach is committed to improving the lives of individuals who are struggling with mental health and addiction.",
-    images: ["/images/hero/amity-2-desktop.jpg"],
+    images: ["/images/hero/tdd-hero-desktop.jpg"],
   },
 };
 

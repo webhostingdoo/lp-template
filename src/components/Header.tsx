@@ -116,7 +116,7 @@ export default function Header() {
             {/* Mobile only: hero image at top */}
             <div className="lg:hidden relative h-[220px] w-full shrink-0">
               <img
-                src="/images/hero/amity-2-desktop.jpg"
+                src="/images/hero/tdd-hero-desktop.jpg"
                 alt="Amity Palm Beach"
                 className="w-full h-full object-cover"
               />
@@ -178,7 +178,7 @@ export default function Header() {
           {/* RIGHT PANEL - hero image, desktop only */}
           <div className="hidden lg:block flex-1 relative">
             <img
-              src="/images/hero/amity-2-desktop.jpg"
+              src="/images/hero/tdd-hero-desktop.jpg"
               alt="Amity Palm Beach"
               className="w-full h-full object-cover"
             />
