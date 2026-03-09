@@ -37,11 +37,7 @@ export default function TreatmentPage({ params }: { params: { slug: string } }) 
         imageDesktop={t.hero_image_desktop}
         imageMobile={t.hero_image_mobile}
       />
-      <Process
-        quote={t.process_quote}
-        author={t.process_author}
-        authorTitle={t.process_author_title}
-      />
+      <Process />
       <InsuranceCoverage
         eyebrow={t.insurance_eyebrow}
         h2={t.insurance_h2}
@@ -51,11 +47,7 @@ export default function TreatmentPage({ params }: { params: { slug: string } }) 
         h2_2={t.insurance_h2_2}
         body2={t.insurance_body_2}
       />
-      <TestimonialQuote
-        quote={t.process_quote}
-        author={t.process_author}
-        authorTitle={t.process_author_title}
-      />
+      <TestimonialQuote />
       <BreakTheAddiction
         eyebrow={t.break_eyebrow}
         h2={t.break_h2}
