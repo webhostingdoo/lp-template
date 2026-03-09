@@ -1,6 +1,23 @@
-"use client";
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 export default function ContactContent() {
+  const searchParams = useSearchParams();
+  const [gclid, setGclid] = useState('');
+
+  useEffect(() => {
+    const urlGclid = searchParams.get('gclid');
+    if (urlGclid) {
+      sessionStorage.setItem('gclid', urlGclid);
+      setGclid(urlGclid);
+    } else {
+      const stored = sessionStorage.getItem('gclid');
+      if (stored) setGclid(stored);
+    }
+  }, [searchParams]);
+
   const inputClass = "w-full px-4 py-3 rounded bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-gold transition";
   const labelClass = "block text-white/60 text-sm mb-2";
 
@@ -20,6 +37,7 @@ export default function ContactContent() {
               <input type="hidden" name="00NDn00000brX59" value="PPC - Google" />
               <input type="hidden" name="lead_source" value="Tru Dallas Detox" />
               <input type="hidden" name="00NDn00000brX5E" value="Web" />
+              <input type="hidden" id="00NDn00000bssdB" name="00NDn00000bssdB" value={gclid} />
 
               {/* Section 1 */}
               <div className="mb-10">

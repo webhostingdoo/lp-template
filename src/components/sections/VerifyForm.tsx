@@ -1,4 +1,23 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+
 export default function VerifyForm() {
+  const searchParams = useSearchParams();
+  const [gclid, setGclid] = useState('');
+
+  useEffect(() => {
+    const urlGclid = searchParams.get('gclid');
+    if (urlGclid) {
+      sessionStorage.setItem('gclid', urlGclid);
+      setGclid(urlGclid);
+    } else {
+      const stored = sessionStorage.getItem('gclid');
+      if (stored) setGclid(stored);
+    }
+  }, [searchParams]);
+
   const inputClass = "w-full bg-white/5 border border-white/20 rounded px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gold";
   const labelClass = "block text-white/60 text-sm mb-1";
 
@@ -16,6 +35,7 @@ export default function VerifyForm() {
             <input type="hidden" name="00NDn00000brX59" value="PPC - Google" />
             <input type="hidden" name="lead_source" value="Tru Dallas Detox" />
             <input type="hidden" name="00NDn00000brX5E" value="Web" />
+            <input type="hidden" id="00NDn00000bssdB" name="00NDn00000bssdB" value={gclid} />
 
             {/* Section 1 */}
             <div className="mb-10">
