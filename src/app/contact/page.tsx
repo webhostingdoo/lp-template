@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import ContactHero from "@/components/sections/ContactHero";
 import ContactContent from "@/components/sections/ContactContent";
 
@@ -10,7 +11,9 @@ export default function ContactPage() {
   return (
     <main>
       <ContactHero />
-      <ContactContent />
+      <Suspense fallback={null}>
+        <ContactContent />
+      </Suspense>
     </main>
   );
 }
