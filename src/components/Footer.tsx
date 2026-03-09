@@ -45,9 +45,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <nav className="flex flex-wrap gap-6 text-sm">
-              <a href="/privacy-policy" className="text-white/60 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/accessibility" className="text-white/60 hover:text-white transition-colors">Accessibility</a>
-              <a href="/hipaa-disclosure" className="text-white/60 hover:text-white transition-colors">HIPAA Disclosure</a>
+              <a href="/privacy-policy" className="text-white/60 hover:text-white transition-colors">Privacy Policy & HIPAA Notice</a>
             </nav>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/share/1C6s9szv9s/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/40 transition">
