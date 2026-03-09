@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Detox", href: "/detox" },
-  { label: "Residential", href: "/residential" },
+  { label: "Detox", href: "/#addiction-treatment" },
+  { label: "Our Facilities", href: "/#our-facilities" },
   { label: "FAQ", href: "/faq" },
   { label: "Verify Insurance", href: "/verify-insurance" },
   { label: "Contact", href: "/contact" },
@@ -167,7 +167,7 @@ export default function Header() {
             {/* Bottom link */}
             <div className="px-8 lg:px-10 mt-6">
               <div className="border-t border-gray-300">
-                <a href="#" className="flex items-center justify-between py-5 text-xl font-light text-gray-800 hover:text-[#0e2a47] transition-colors">
+                <a href="/" className="flex items-center justify-between py-5 text-xl font-light text-gray-800 hover:text-[#0e2a47] transition-colors">
                   <span>Tru Dallas Detox</span>
                   <span className="text-2xl">&rarr;</span>
                 </a>

@@ -28,7 +28,7 @@ const facilityCards = [
 
 export default function FacilitiesSlider() {
   return (
-    <section className="bg-navy py-20 md:py-28">
+    <section id="our-facilities" className="bg-navy py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <h2 className="font-maistra text-3xl md:text-5xl text-white mb-4">
           Where You Recover Matters
