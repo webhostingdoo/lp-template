@@ -44,7 +44,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <body className={`${cormorant.variable} ${montserrat.variable}`}>
+        <Suspense fallback={null}>
+          <GclidCapture />
+        </Suspense>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <Analytics />
+        <SpeedInsights />
         <Script src="https://305685.tctm.co/t.js" strategy="afterInteractive" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17709217731"
@@ -58,16 +66,6 @@ export default function RootLayout({
             gtag('config', 'AW-17709217731');
           `}
         </Script>
-      </head>
-      <body className={`${cormorant.variable} ${montserrat.variable}`}>
-        <Suspense fallback={null}>
-          <GclidCapture />
-        </Suspense>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );
