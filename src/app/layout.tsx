@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script src="//305685.tctm.co/t.js" strategy="afterInteractive" />
+        <Script src="https://305685.tctm.co/t.js" strategy="afterInteractive" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17709217731"
           strategy="afterInteractive"
