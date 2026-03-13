@@ -64,7 +64,7 @@ export default function FaqContent() {
             <div className="space-y-10">
               {section.questions.map((item, j) => (
                 <div key={j}>
-                  <h3 className="text-gold text-lg font-semibold mb-3">{item.q}</h3>
+                  <h3 className="text-accent text-lg font-semibold mb-3">{item.q}</h3>
                   <p className="text-white/75 text-lg leading-relaxed">{item.a}</p>
                 </div>
               ))}

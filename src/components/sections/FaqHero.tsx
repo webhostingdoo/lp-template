@@ -9,7 +9,7 @@ export default function FaqHero() {
           The First Step Is Yours to Take.<br />
           <span className="text-white">We&apos;ll Carry Everything After That.</span>
         </h1>
-        <hr className="border-t-2 border-gold w-16 mt-6 mb-8" />
+        <hr className="border-t-2 border-accent w-16 mt-6 mb-8" />
         <p className="text-white/75 text-xl max-w-2xl leading-relaxed">
           Most of the people who pick up when you call have sat exactly where you&apos;re sitting right now. They&apos;ve lived this. That changes everything about the conversation — and everything about how fast we can move you from where you are right now, to somewhere safe.
         </p>

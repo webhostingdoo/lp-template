@@ -8,7 +8,7 @@ export default function ContactHero() {
         <h1 className="font-maistra text-4xl md:text-6xl text-white leading-tight mb-6">
           Get in Touch
         </h1>
-        <hr className="border-t-2 border-gold w-16 mt-6 mb-8" />
+        <hr className="border-t-2 border-accent w-16 mt-6 mb-8" />
         <p className="text-white/75 text-xl max-w-2xl leading-relaxed">
           Whether you have a question, need help understanding your options, or are ready to take the next step — we&apos;re here. A real person will respond quickly.
         </p>

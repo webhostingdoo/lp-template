@@ -1,5 +1,7 @@
 "use client";
 
+import config from '@/data/site-config.json';
+
 interface TestimonialQuoteProps {
   quote?: string;
   author?: string;
@@ -8,9 +10,9 @@ interface TestimonialQuoteProps {
 
 export default function TestimonialQuote(props: TestimonialQuoteProps) {
   const {
-    quote = "\u201CThe fear of withdrawal keeps more people sick than withdrawal itself ever could. We built our detox protocol specifically to change that.\u201D",
-    author = "Mitchell Naficy, MD",
-    authorTitle = "Medical Director",
+    quote = config.testimonial.quote,
+    author = config.testimonial.author,
+    authorTitle = config.testimonial.role,
   } = props;
 
   return (

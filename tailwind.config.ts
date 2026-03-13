@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: "#0e2a47",
-        "navy-light": "#2a5298",
-        gold: "#D4AF37",
+        primary: "#0e2a47",
+        "primary-light": "#2a5298",
+        accent: "#D4AF37",
       },
       fontFamily: {
         maistra: ["MaistraDisplay", "serif"],

@@ -45,7 +45,7 @@ export default function TreatmentCards(props: TreatmentCardsProps) {
   ];
 
   return (
-    <section className="bg-navy py-20 md:py-28">
+    <section className="bg-primary py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <h2 className="font-maistra text-3xl md:text-5xl text-white mb-12">
           {h2}

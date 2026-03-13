@@ -85,7 +85,7 @@ export default function BreakTheAddiction(props: BreakTheAddictionProps) {
             className="rounded-lg w-full h-auto object-cover"
           />
           <div>
-            <span className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block">
+            <span className="text-accent text-sm uppercase tracking-[0.2em] mb-4 block">
               {eyebrow}
             </span>
             <h2 className="font-maistra text-3xl md:text-5xl text-white mb-6">
@@ -104,7 +104,7 @@ export default function BreakTheAddiction(props: BreakTheAddictionProps) {
         <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
           {amenities.map((item) => (
             <li key={item.label} className="flex items-center gap-3 text-white text-lg">
-              <span className="text-gold shrink-0">{item.icon}</span>
+              <span className="text-accent shrink-0">{item.icon}</span>
               {item.label}
             </li>
           ))}

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import config from '@/data/site-config.json';
 
 interface HeroProps {
   supertitle?: string;
@@ -56,7 +57,7 @@ export default function Hero(props: HeroProps) {
 
       {/* Hero content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 pt-28 sm:pt-36 md:pt-64 pb-16">
-        <p className="text-sm md:text-base uppercase tracking-[0.2em] text-gold mb-4">
+        <p className="text-sm md:text-base uppercase tracking-[0.2em] text-accent mb-4">
           {supertitle}
         </p>
         <h1 className="font-maistra text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight max-w-2xl">
@@ -70,10 +71,10 @@ export default function Hero(props: HeroProps) {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-12 items-start">
           <a
-            href="tel:+18669717393"
+            href={`tel:${config.brand.phoneRaw}`}
             className="inline-block px-8 py-4 text-center font-semibold rounded btn-primary transition"
           >
-            <span className="text-xl uppercase">(866) 971-7393</span>
+            <span className="text-xl uppercase">{config.brand.phone}</span>
             <br />
             <span className="text-base font-normal uppercase">
               Call for Free Assessment
@@ -93,37 +94,20 @@ export default function Hero(props: HeroProps) {
 
         {/* Trust Badges */}
         <div className="flex flex-wrap gap-8 md:gap-12">
-          <div className="flex flex-col items-center gap-2 text-white/90">
-            <svg className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg>
-            <span className="text-xs md:text-sm uppercase tracking-wider text-center">100% CONFIDENTIAL</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 text-white/90">
-            <svg className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M2 4v16" />
-              <path d="M2 8h18a2 2 0 0 1 2 2v10" />
-              <path d="M2 17h20" />
-              <path d="M6 8v9" />
-            </svg>
-            <span className="text-xs md:text-sm uppercase tracking-wider text-center">Same-Day Admission</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 text-white/90">
-            <svg className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              <path d="M12 8v8" />
-              <path d="M8 12h8" />
-            </svg>
-            <span className="text-xs md:text-sm uppercase tracking-wider text-center">24/7 Clinical Staff</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 text-white/90">
-            <svg className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              <polyline points="9 12 11 14 15 10" />
-            </svg>
-            <span className="text-xs md:text-sm uppercase tracking-wider text-center">INSURANCE ACCEPTED</span>
-          </div>
+          {config.trustBadges.map((badge, i) => {
+            const icons = [
+              <svg key="lock" className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>,
+              <svg key="flag" className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 4v16" /><path d="M2 8h18a2 2 0 0 1 2 2v10" /><path d="M2 17h20" /><path d="M6 8v9" /></svg>,
+              <svg key="shield-plus" className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M12 8v8" /><path d="M8 12h8" /></svg>,
+              <svg key="shield-check" className="text-white shrink-0" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>,
+            ];
+            return (
+              <div key={badge} className="flex flex-col items-center gap-2 text-white/90">
+                {icons[i] || icons[0]}
+                <span className="text-xs md:text-sm uppercase tracking-wider text-center">{badge}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

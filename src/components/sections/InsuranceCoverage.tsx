@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import config from '@/data/site-config.json';
 
 interface InsuranceCoverageProps {
   eyebrow?: string;
@@ -30,7 +31,7 @@ export default function InsuranceCoverage(props: InsuranceCoverageProps) {
       style={{ backgroundColor: "#0a1f35" }}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <span className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block">
+        <span className="text-accent text-sm uppercase tracking-[0.2em] mb-4 block">
           {eyebrow}
         </span>
 
@@ -83,7 +84,7 @@ export default function InsuranceCoverage(props: InsuranceCoverageProps) {
         {/* Row 2: Image left, text right */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start">
           <div>
-            <span className="text-gold text-sm uppercase tracking-[0.2em] mb-4 block">
+            <span className="text-accent text-sm uppercase tracking-[0.2em] mb-4 block">
               {eyebrow2}
             </span>
             <h3 className="font-maistra text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
@@ -93,14 +94,9 @@ export default function InsuranceCoverage(props: InsuranceCoverageProps) {
               {body2}
             </p>
             <ul className="space-y-3 mb-10">
-              {[
-                "24/7 Medical Withdrawal Management",
-                "Private Rooms, Single-Patient Focus",
-                "30, 60, or 90-Day Residential Programs",
-                "Most PPO Plans Covered Up to 100%",
-              ].map((item) => (
+              {config.featureChecklist.map((item) => (
                 <li key={item} className="flex items-center gap-3 text-white text-lg">
-                  <svg className="w-5 h-5 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <svg className="w-5 h-5 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                   {item}
@@ -109,10 +105,10 @@ export default function InsuranceCoverage(props: InsuranceCoverageProps) {
             </ul>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
-                href="tel:+18669717393"
+                href={`tel:${config.brand.phoneRaw}`}
                 className="inline-block px-8 py-4 text-center font-semibold rounded btn-primary transition"
               >
-                <span className="text-lg">(866) 971-7393</span>
+                <span className="text-lg">{config.brand.phone}</span>
                 <br />
                 <span className="text-sm font-normal">Call for Free Assessment</span>
               </a>

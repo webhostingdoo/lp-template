@@ -3,15 +3,9 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import config from '@/data/site-config.json';
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Detox", href: "/#addiction-treatment" },
-  { label: "Our Facilities", href: "/#our-facilities" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Verify Insurance", href: "/verify-insurance" },
-  { label: "Contact", href: "/contact" },
-];
+const navLinks = config.nav.links;
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,15 +23,15 @@ export default function Header() {
       {/* ═══════════════════════ HEADER ═══════════════════════ */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-          scrolled ? "bg-navy/95 backdrop-blur-sm" : "bg-transparent"
+          scrolled ? "bg-primary/95 backdrop-blur-sm" : "bg-transparent"
         }`}
       >
         {/* Top bar */}
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 lg:px-8 py-5">
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/logos/tru_dallas_logo_nav.svg"
-              alt="Tru Dallas Detox"
+              src={`/images/logos/${config.logos.nav}`}
+              alt={config.brand.name}
               width={120}
               height={40}
               priority
@@ -50,11 +44,11 @@ export default function Header() {
             <div className="w-px h-8 bg-white/30" />
             <div className="flex items-center gap-3">
               <span className="text-white font-maistra text-base tracking-widest uppercase">
-                Tru Dallas Detox
+                {config.brand.name}
               </span>
               <div className="flex items-center gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-gold">
+                  <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-accent">
                     <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
                   </svg>
                 ))}
@@ -65,10 +59,10 @@ export default function Header() {
           {/* Spacer to push mobile button right */}
           <div className="flex items-center gap-3 ml-auto">
             <a
-              href="tel:+18669717393"
+              href={`tel:${config.brand.phoneRaw}`}
               className="hidden sm:inline-block lg:hidden px-4 py-2 text-sm font-semibold rounded btn-primary transition"
             >
-              (866) 971-7393
+              {config.brand.phone}
             </a>
             <button
               className="block text-white text-2xl p-2"
@@ -98,10 +92,10 @@ export default function Header() {
               ))}
             </div>
             <a
-              href="tel:+18669717393"
+              href={`tel:${config.brand.phoneRaw}`}
               className="px-5 py-2.5 text-sm font-semibold rounded btn-primary transition whitespace-nowrap"
             >
-              (866) 971-7393
+              {config.brand.phone}
             </a>
           </div>
         </nav>
@@ -118,14 +112,14 @@ export default function Header() {
             <div className="lg:hidden relative h-[220px] w-full shrink-0">
               <img
                 src="/images/hero/tdd-hero-desktop.jpg"
-                alt="Tru Dallas Detox"
+                alt={config.brand.name}
                 className="w-full h-full object-cover"
               />
               {/* Mobile top bar over image */}
-              <div className="absolute inset-x-0 top-0 flex items-center justify-between px-4 py-3 bg-navy/80">
-                <img src="/images/logos/tru_dallas_logo_nav.svg" alt="Tru Dallas Detox" className="h-8 w-auto" />
-                <a href="tel:+18669717393" className="px-4 py-2 text-sm font-semibold bg-navy text-white rounded">
-                  (866) 971-7393
+              <div className="absolute inset-x-0 top-0 flex items-center justify-between px-4 py-3 bg-primary/80">
+                <img src={`/images/logos/${config.logos.nav}`} alt={config.brand.name} className="h-8 w-auto" />
+                <a href={`tel:${config.brand.phoneRaw}`} className="px-4 py-2 text-sm font-semibold bg-primary text-white rounded">
+                  {config.brand.phone}
                 </a>
                 <button onClick={() => setMobileMenuOpen(false)} className="text-white text-2xl p-1">{"\u2715"}</button>
               </div>
@@ -133,12 +127,12 @@ export default function Header() {
 
             {/* Desktop logo area */}
             <div className="hidden lg:flex items-start gap-3 px-10 pt-10 pb-6">
-              <img src="/images/logos/tru_dallas_logo_nav.svg" alt="Tru Dallas Detox" className="h-10 w-auto" />
+              <img src={`/images/logos/${config.logos.nav}`} alt={config.brand.name} className="h-10 w-auto" />
             </div>
 
             {/* Title + stars - desktop only */}
             <div className="hidden lg:block px-10 pb-8">
-              <p className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-1">Tru Dallas Detox</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-gray-500 mb-1">{config.brand.name}</p>
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37">
@@ -168,7 +162,7 @@ export default function Header() {
             <div className="px-8 lg:px-10 mt-6">
               <div className="border-t border-gray-300">
                 <a href="/" className="flex items-center justify-between py-5 text-xl font-light text-gray-800 hover:text-[#0e2a47] transition-colors">
-                  <span>Tru Dallas Detox</span>
+                  <span>{config.brand.name}</span>
                   <span className="text-2xl">&rarr;</span>
                 </a>
                 <div className="border-t border-gray-300"></div>
@@ -180,7 +174,7 @@ export default function Header() {
           <div className="hidden lg:block flex-1 relative">
             <img
               src="/images/hero/tdd-hero-desktop.jpg"
-              alt="Tru Dallas Detox"
+              alt={config.brand.name}
               className="w-full h-full object-cover"
             />
             {/* X close button */}

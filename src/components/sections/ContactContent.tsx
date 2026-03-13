@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import config from '@/data/site-config.json';
 
 export default function ContactContent() {
   const [gclid, setGclid] = useState('');
@@ -10,7 +11,7 @@ export default function ContactContent() {
     if (stored) setGclid(stored);
   }, []);
 
-  const inputClass = "w-full px-4 py-3 rounded bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-gold transition";
+  const inputClass = "w-full px-4 py-3 rounded bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-accent transition";
   const labelClass = "block text-white/60 text-sm mb-2";
 
   return (
@@ -21,20 +22,20 @@ export default function ContactContent() {
           {/* Left — Form */}
           <div>
             <form
-              action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DDn00000CYDfk"
+              action={config.salesforce.actionUrl}
               method="POST"
             >
-              <input type="hidden" name="oid" value="00DDn00000CYDfk" />
-              <input type="hidden" name="retURL" value="https://admissions.dallasdetox.com/" />
+              <input type="hidden" name="oid" value={config.salesforce.oid} />
+              <input type="hidden" name="retURL" value={config.salesforce.retUrl} />
               <input type="hidden" name="00NDn00000brX59" value="PPC - Google" />
-              <input type="hidden" name="lead_source" value="Tru Dallas Detox" />
+              <input type="hidden" name="lead_source" value={config.salesforce.leadSource} />
               <input type="hidden" name="00NDn00000brX5E" value="Web" />
-              <input type="hidden" id="00NDn00000bssdB" name="00NDn00000bssdB" value={gclid} />
+              <input type="hidden" id={config.salesforce.gclidFieldId} name={config.salesforce.gclidFieldId} value={gclid} />
 
               {/* Section 1 */}
               <div className="mb-10">
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="w-8 h-8 rounded-full bg-gold text-navy text-sm font-bold flex items-center justify-center shrink-0">1</span>
+                  <span className="w-8 h-8 rounded-full bg-accent text-primary text-sm font-bold flex items-center justify-center shrink-0">1</span>
                   <h2 className="font-maistra text-2xl text-white">Contact Person</h2>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-6 mb-6">
@@ -68,7 +69,7 @@ export default function ContactContent() {
               {/* Section 2 */}
               <div className="mb-10">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="w-8 h-8 rounded-full bg-gold text-navy text-sm font-bold flex items-center justify-center shrink-0">2</span>
+                  <span className="w-8 h-8 rounded-full bg-accent text-primary text-sm font-bold flex items-center justify-center shrink-0">2</span>
                   <h2 className="font-maistra text-2xl text-white">Policy Benefits Check</h2>
                 </div>
                 <p className="text-white/50 text-sm mb-6 ml-11">Optional — but helps us get you real numbers faster.</p>
@@ -110,19 +111,19 @@ export default function ContactContent() {
           {/* Right — Contact Info + Map */}
           <div className="flex flex-col gap-10">
             <div>
-              <h2 className="font-maistra text-2xl text-white mb-6">Tru Dallas Detox</h2>
+              <h2 className="font-maistra text-2xl text-white mb-6">{config.brand.name}</h2>
               <div className="space-y-4 text-white/70 text-base leading-relaxed">
                 <div className="flex items-start gap-3">
-                  <span className="text-gold mt-1">📍</span>
-                  <span>2219 West Euless Blvd Suite 200<br />Euless, TX 76040<br />United States</span>
+                  <span className="text-accent mt-1">📍</span>
+                  <span>{config.brand.address}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-gold">📞</span>
-                  <a href="tel:+18669717393" className="hover:text-white transition">(866) 971-7393</a>
+                  <span className="text-accent">📞</span>
+                  <a href={`tel:${config.brand.phoneRaw}`} className="hover:text-white transition">{config.brand.phone}</a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-gold">✉️</span>
-                  <a href="mailto:info@dallasdetox.com" className="hover:text-white transition">info@dallasdetox.com</a>
+                  <span className="text-accent">✉️</span>
+                  <a href={`mailto:${config.brand.email}`} className="hover:text-white transition">{config.brand.email}</a>
                 </div>
               </div>
             </div>

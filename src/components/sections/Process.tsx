@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import config from '@/data/site-config.json';
 
 const processSteps = [
   {
@@ -16,8 +17,8 @@ const processSteps = [
     title: "Talk to Someone Who Actually Knows",
     description:
       "Connect with a compassionate intake coordinator who will listen to your story and answer all your questions privately.",
-    cta: "Call 866-971-7393",
-    href: "tel:+18669717393",
+    cta: `Call ${config.brand.phone}`,
+    href: `tel:${config.brand.phoneRaw}`,
   },
   {
     number: "03",
@@ -37,15 +38,15 @@ interface ProcessProps {
 
 export default function Process(props: ProcessProps) {
   const {
-    quote = "\u201CTexans take care of their own. We built Tru Dallas Detox so no one from this city has to leave home to get world-class treatment.\u201D",
-    author = "Matt Hooten, LPC-S",
-    authorTitle = "Clinical Director",
+    quote = config.process.quote,
+    author = config.process.author,
+    authorTitle = config.process.authorTitle,
   } = props;
 
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
-    <section className="bg-navy py-20 md:py-28">
+    <section className="bg-primary py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
         {/* Left — Blockquote */}
         <div className="relative pl-8 border-l-2 border-white/20">
@@ -73,7 +74,7 @@ export default function Process(props: ProcessProps) {
                 style={{
                   backgroundColor: isActive ? "rgba(42,82,152,0.4)" : "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.12)",
-                  borderLeft: isActive ? "3px solid var(--gold)" : "1px solid rgba(255,255,255,0.12)",
+                  borderLeft: isActive ? "3px solid var(--accent)" : "1px solid rgba(255,255,255,0.12)",
                 }}
                 onClick={() =>
                   setActiveStep(isActive ? null : i)
@@ -112,7 +113,7 @@ export default function Process(props: ProcessProps) {
                     </p>
                     <a
                       href={step.href}
-                      className="text-gold text-sm font-semibold hover:underline"
+                      className="text-accent text-sm font-semibold hover:underline"
                       onClick={(e) => e.stopPropagation()}
                     >
                       {step.cta} &rarr;

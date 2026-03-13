@@ -79,7 +79,7 @@ export default function PrivacyContent() {
               {section.bullets && (
                 <ul className="space-y-2 mb-4">
                   {section.bullets.map((b, j) => (
-                    <li key={j} className="text-white/70 text-base leading-relaxed pl-4 border-l border-gold/40">
+                    <li key={j} className="text-white/70 text-base leading-relaxed pl-4 border-l border-accent/40">
                       {b}
                     </li>
                   ))}

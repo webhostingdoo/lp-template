@@ -8,7 +8,13 @@
       "Bash(netstat:*)",
       "Bash(taskkill:*)",
       "Bash(npm run:*)",
-      "Bash(npm i:*)"
+      "Bash(npm i:*)",
+      "Bash(npm install:*)",
+      "Bash(find /o/LP-Template/src -type f | grep -E \"\\\\.\\(tsx?|json|jsx|mdx?|html|xml|yaml|yml|env\\)$\" | head -40)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('O:/LP-Template/src/data/site-config.json','utf8'\\)\\); console.log\\('Valid JSON'\\)\")",
+      "Bash(cd O:/LP-Template && npx tsc --noEmit --pretty 2>&1 | head -20)"
     ]
   }
 }

@@ -2,26 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'MaistraDisplay';
-  src: url('/fonts/MaistraDisplay-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TyponineSansPro';
-  src: url('/fonts/TyponineSansPro-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
-  --navy: #0e2a47;
-  --navy-light: #2a5298;
-  --gold: #D4AF37;
+  --primary: #0e2a47;
+  --primary-light: #2a5298;
+  --accent: #D4AF37;
   --text-white: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.75);
 }
@@ -31,9 +15,8 @@ html {
 }
 
 body {
-  font-family: 'TyponineSansPro', 'Montserrat', sans-serif;
   color: var(--text-white);
-  background: var(--navy);
+  background: var(--primary);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -100,7 +83,7 @@ body {
 .quote-name {
   font-weight: 600;
   font-size: 1.125rem;
-  color: #0e2a47;
+  color: var(--primary);
 }
 
 .quote-title {

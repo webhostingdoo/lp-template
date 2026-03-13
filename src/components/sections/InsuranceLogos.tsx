@@ -1,33 +1,29 @@
 "use client";
 
 import Image from "next/image";
+import config from '@/data/site-config.json';
 
-const insuranceLogos = [
-  { name: "Aetna", src: "/images/insurance/aetna.png" },
-  { name: "Cigna", src: "/images/insurance/cigna.png" },
-  { name: "GEHA", src: "/images/insurance/geha.png" },
-  { name: "Anthem", src: "/images/insurance/anthem.png" },
-  { name: "UnitedHealthcare", src: "/images/insurance/unitedhealthcare.png" },
-  {
-    name: "Blue Cross Blue Shield",
-    src: "/images/insurance/bluecross-blueshield.png",
-  },
-  { name: "HealthPartners", src: "/images/insurance/healthpartners.png" },
-  { name: "ComPsych", src: "/images/insurance/compsych.png" },
-];
+const insuranceLogos = config.insuranceLogos.providers.map((name) => ({
+  name,
+  src: `/images/insurance/${name.toLowerCase().replace(/\s+/g, '-')}.png`,
+}));
 
 export default function InsuranceLogos() {
   return (
-    <section className="bg-navy py-20 md:py-28 border-t border-white/10">
+    <section className="bg-primary py-20 md:py-28 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mb-12">
-          <h2 className="font-maistra text-3xl md:text-5xl text-white mb-4">
-            Your Insurance Is Probably Already on This List
-          </h2>
-          <hr className="border-t-2 border-gold w-20 mb-6" />
-          <p className="text-white/75 text-lg leading-relaxed">
-            Most PPO plans cover the full cost of treatment — and we&rsquo;ll confirm yours in minutes. Check your provider below, or call us and we&rsquo;ll walk you through exactly what you&rsquo;re covered for, at no cost and with no obligation.
-          </p>
+          {config.insuranceLogos.heading && (
+            <h2 className="font-maistra text-3xl md:text-5xl text-white mb-4">
+              {config.insuranceLogos.heading}
+            </h2>
+          )}
+          <hr className="border-t-2 border-accent w-20 mb-6" />
+          {config.insuranceLogos.body && (
+            <p className="text-white/75 text-lg leading-relaxed">
+              {config.insuranceLogos.body}
+            </p>
+          )}
         </div>
 
         {/* Logo grid */}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import config from '@/data/site-config.json';
 
 export default function VerifyForm() {
   const [gclid, setGclid] = useState('');
@@ -10,7 +11,7 @@ export default function VerifyForm() {
     if (stored) setGclid(stored);
   }, []);
 
-  const inputClass = "w-full bg-white/5 border border-white/20 rounded px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gold";
+  const inputClass = "w-full bg-white/5 border border-white/20 rounded px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent";
   const labelClass = "block text-white/60 text-sm mb-1";
 
   return (
@@ -18,21 +19,21 @@ export default function VerifyForm() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl">
           <form
-            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DDn00000CYDfk"
+            action={config.salesforce.actionUrl}
             method="POST"
           >
             {/* Hidden fields */}
-            <input type="hidden" name="oid" value="00DDn00000CYDfk" />
-            <input type="hidden" name="retURL" value="https://admissions.dallasdetox.com/" />
+            <input type="hidden" name="oid" value={config.salesforce.oid} />
+            <input type="hidden" name="retURL" value={config.salesforce.retUrl} />
             <input type="hidden" name="00NDn00000brX59" value="PPC - Google" />
-            <input type="hidden" name="lead_source" value="Tru Dallas Detox" />
+            <input type="hidden" name="lead_source" value={config.salesforce.leadSource} />
             <input type="hidden" name="00NDn00000brX5E" value="Web" />
-            <input type="hidden" id="00NDn00000bssdB" name="00NDn00000bssdB" value={gclid} />
+            <input type="hidden" id={config.salesforce.gclidFieldId} name={config.salesforce.gclidFieldId} value={gclid} />
 
             {/* Section 1 */}
             <div className="mb-10">
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-8 h-8 rounded-full bg-gold text-navy text-sm font-bold flex items-center justify-center shrink-0">1</span>
+                <span className="w-8 h-8 rounded-full bg-accent text-primary text-sm font-bold flex items-center justify-center shrink-0">1</span>
                 <h2 className="font-maistra text-2xl text-white">Contact Person</h2>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -67,7 +68,7 @@ export default function VerifyForm() {
             {/* Section 2 */}
             <div className="mb-10">
               <div className="flex items-center gap-3 mb-2">
-                <span className="w-8 h-8 rounded-full bg-gold text-navy text-sm font-bold flex items-center justify-center shrink-0">2</span>
+                <span className="w-8 h-8 rounded-full bg-accent text-primary text-sm font-bold flex items-center justify-center shrink-0">2</span>
                 <h2 className="font-maistra text-2xl text-white">Policy Benefits Check</h2>
               </div>
               <p className="text-white/50 text-sm mb-6 ml-11">Optional — but helps us get you real numbers faster.</p>

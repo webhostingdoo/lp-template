@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import GclidCapture from '@/components/GclidCapture';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import config from '@/data/site-config.json';
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -25,14 +26,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Drug & Alcohol Detox and Rehab Treatment Centers | Tru Dallas Detox",
-  description:
-    "Tru Dallas Detox is committed to improving the lives of individuals who are struggling with mental health and Addiction.",
+  title: config.meta.defaultTitle,
+  description: config.meta.defaultDescription,
   openGraph: {
     type: "website",
-    title: "Drug & Alcohol Detox and Rehab Treatment Centers",
-    description:
-      "Tru Dallas Detox is committed to improving the lives of individuals who are struggling with mental health and addiction.",
+    title: config.meta.defaultTitle,
+    description: config.meta.defaultDescription,
     images: ["/images/hero/tdd-hero-desktop.jpg"],
   },
 };
@@ -53,9 +52,9 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <SpeedInsights />
-        <Script src="https://305685.tctm.co/t.js" strategy="afterInteractive" />
+        <Script src={config.tracking.ctmScriptUrl} strategy="afterInteractive" />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17709217731"
+          src={`https://www.googletagmanager.com/gtag/js?id=${config.tracking.googleAdsId}`}
           strategy="afterInteractive"
         />
         <Script id="google-ads" strategy="afterInteractive">
@@ -63,7 +62,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-17709217731');
+            gtag('config', '${config.tracking.googleAdsId}');
           `}
         </Script>
       </body>
