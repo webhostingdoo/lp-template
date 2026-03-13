@@ -14,7 +14,7 @@ interface HeroProps {
 export default function Hero(props: HeroProps) {
   const {
     supertitle = "SAME DAY ADMISSION",
-    h1 = "Dallas Medical Detox & Rehab",
+    h1 = config.hero.h1,
     paragraph = "We accept most private PPO plans. Get a confidential 5-minute benefits check and find out if your treatment is 100% covered — private rooms available.",
     imageDesktop = "hero-desktop.jpg",
     imageMobile = "hero-mobile.jpg",

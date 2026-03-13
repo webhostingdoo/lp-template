@@ -25,6 +25,7 @@
     "footer": "logo-white.png"
   },
   "hero": {
+    "h1": "Medical Detox & Residential Treatment",
     "imageDesktop": "hero-desktop.jpg",
     "imageMobile": "hero-mobile.jpg"
   },
@@ -127,7 +128,7 @@
   "insuranceLogos": {
     "heading": "PLACEHOLDER INSURANCE HEADING",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "providers": ["Aetna", "BCBS", "Cigna", "UnitedHealthcare", "Anthem", "UMR", "GEHA"]
+    "providers": ["Aetna", "BCBS", "Cigna", "UnitedHealthcare", "Anthem", "HealthPartners", "GEHA"]
   },
   "accommodations": {
     "heading1": "PLACEHOLDER ACCOMMODATIONS HEADING 1",
@@ -192,7 +193,7 @@
     "heading": "PLACEHOLDER BREAK THE ADDICTION HEADING",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "image": "break-image.jpg",
-    "amenities": ["Amenity 1", "Amenity 2", "Amenity 3", "Amenity 4", "Amenity 5", "Amenity 6"],
+    "amenities": ["Outdoor Activities", "Medical Detox Services", "Wellness & Spa", "Private Rooms", "Chef-Prepared Meals", "FMLA Assistance"],
     "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.",
     "quoteAuthor": "PLACEHOLDER AUTHOR",
     "quoteTitle": "PLACEHOLDER TITLE"
