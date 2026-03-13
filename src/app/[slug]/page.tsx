@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import treatments from "@/data/treatments.json";
+import treatments from "@/data/pages.json";
 import Hero from "@/components/sections/Hero";
 import Process from "@/components/sections/Process";
 import InsuranceCoverage from "@/components/sections/InsuranceCoverage";

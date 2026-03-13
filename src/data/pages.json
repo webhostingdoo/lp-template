@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "PLACEHOLDER-SLUG",
+    "page_title": "PLACEHOLDER PAGE TITLE | PLACEHOLDER BRAND NAME",
+    "page_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. PLACEHOLDER BRAND NAME. Call (111) 111-1111.",
+    "hero_supertitle": "PLACEHOLDER SUPERTITLE",
+    "hero_h1": "Medical Detox & Residential Treatment",
+    "hero_paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "hero_image_desktop": "hero-desktop.jpg",
+    "hero_image_mobile": "hero-mobile.jpg",
+    "insurance_eyebrow": "PLACEHOLDER INSURANCE EYEBROW",
+    "insurance_h2": "PLACEHOLDER INSURANCE H2",
+    "insurance_body_p1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+    "insurance_body_p2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "insurance_eyebrow_2": "PLACEHOLDER INSURANCE EYEBROW 2",
+    "insurance_h2_2": "PLACEHOLDER INSURANCE H2 2",
+    "insurance_body_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "break_eyebrow": "PLACEHOLDER BREAK EYEBROW",
+    "break_h2": "PLACEHOLDER BREAK H2",
+    "break_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "treatment_h2": "PLACEHOLDER TREATMENT H2",
+    "treatment_card1_title": "PLACEHOLDER TREATMENT 1",
+    "treatment_card1_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "treatment_card2_title": "PLACEHOLDER TREATMENT 2",
+    "treatment_card2_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "treatment_card3_title": "PLACEHOLDER TREATMENT 3",
+    "treatment_card3_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "form_h2": "PLACEHOLDER FORM HEADING",
+    "form_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+]

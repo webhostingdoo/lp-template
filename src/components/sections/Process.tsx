@@ -3,32 +3,7 @@
 import { useState } from "react";
 import config from '@/data/site-config.json';
 
-const processSteps = [
-  {
-    number: "01",
-    title: "See If You're 100% Covered",
-    description:
-      "We work with most major insurance providers. Our team handles the paperwork so you can focus on healing.",
-    cta: "Check coverage now",
-    href: "#verify-form",
-  },
-  {
-    number: "02",
-    title: "Talk to Someone Who Actually Knows",
-    description:
-      "Connect with a compassionate intake coordinator who will listen to your story and answer all your questions privately.",
-    cta: `Call ${config.brand.phone}`,
-    href: `tel:${config.brand.phoneRaw}`,
-  },
-  {
-    number: "03",
-    title: "Your First Day of Real Recovery",
-    description:
-      "Arrive at our facility where our clinical team has prepared a personalized treatment plan specifically for you.",
-    cta: "View Admissions Info",
-    href: "#verify-form",
-  },
-];
+const processSteps = config.process.steps;
 
 interface ProcessProps {
   quote?: string;
@@ -112,11 +87,11 @@ export default function Process(props: ProcessProps) {
                       {step.description}
                     </p>
                     <a
-                      href={step.href}
+                      href={step.cta.href}
                       className="text-accent text-sm font-semibold hover:underline"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      {step.cta} &rarr;
+                      {step.cta.text} &rarr;
                     </a>
                   </div>
                 </div>

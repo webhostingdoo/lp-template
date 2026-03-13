@@ -1,15 +1,15 @@
 {
   "brand": {
-    "name": "Tru Dallas Detox",
-    "phone": "(866) 971-7393",
-    "phoneRaw": "+18669717393",
-    "email": "info@dallasdetox.com",
-    "address": "2219 West Euless Blvd Suite 200, Euless, TX 76040, United States",
+    "name": "PLACEHOLDER BRAND NAME",
+    "phone": "(111) 111-1111",
+    "phoneRaw": "+11111111111",
+    "email": "info@BRANDSLUG.com",
+    "address": "PLACEHOLDER ADDRESS, CITY, STATE ZIP",
     "mapsUrl": "",
     "state": "TX",
     "stateFullName": "Texas",
-    "domain": "https://admissions.dallasdetox.com",
-    "legalName": "Tru Dallas Detox & Recovery Center"
+    "domain": "https://admissions.BRANDSLUG.com",
+    "legalName": "PLACEHOLDER LEGAL ENTITY NAME"
   },
   "colors": {
     "primary": "#0e2a47",
@@ -21,8 +21,8 @@
     "body": "Montserrat"
   },
   "logos": {
-    "nav": "tru_dallas_logo_nav.svg",
-    "footer": "tru_dallas_logo_white.svg"
+    "nav": "logo.png",
+    "footer": "logo-white.png"
   },
   "hero": {
     "imageDesktop": "hero-desktop.jpg",
@@ -33,20 +33,20 @@
     "youtube": ""
   },
   "tracking": {
-    "googleAdsId": "AW-17709217731",
-    "ctmScriptUrl": "https://305685.tctm.co/t.js",
+    "googleAdsId": "AW-PLACEHOLDER",
+    "ctmScriptUrl": "PLACEHOLDER_CTM_SCRIPT",
     "ga4Id": ""
   },
   "salesforce": {
-    "oid": "00DDn00000CYDfk",
-    "actionUrl": "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DDn00000CYDfk",
-    "retUrl": "https://admissions.dallasdetox.com/",
-    "leadSource": "Tru Dallas Detox",
-    "gclidFieldId": "00NDn00000bssdB"
+    "oid": "PLACEHOLDER_OID",
+    "actionUrl": "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=PLACEHOLDER_OID",
+    "retUrl": "https://admissions.BRANDSLUG.com/",
+    "leadSource": "PLACEHOLDER BRAND NAME",
+    "gclidFieldId": "PLACEHOLDER_GCLID_FIELD"
   },
   "meta": {
-    "defaultTitle": "Tru Dallas Detox | Medical Detox & Addiction Treatment Dallas TX",
-    "defaultDescription": "Medical detox and addiction treatment in Dallas TX. Most PPO plans accepted. Same-day admission available."
+    "defaultTitle": "PLACEHOLDER BRAND NAME | Medical Detox & Addiction Treatment",
+    "defaultDescription": "Medical detox and addiction treatment. Most PPO plans accepted. Same-day admission available."
   },
   "nav": {
     "links": [
@@ -95,51 +95,78 @@
     "FMLA Assistance"
   ],
   "process": {
-    "quote": "\"The fear of withdrawal keeps more people sick than withdrawal itself ever could. We built our detox protocol specifically to change that.\"",
-    "author": "Matt Hooten, LPC-S",
-    "authorTitle": "Clinical Director"
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "author": "John Doe, LMHC",
+    "authorTitle": "Clinical Director",
+    "steps": [
+      {
+        "number": "01",
+        "title": "PLACEHOLDER STEP 1 TITLE",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "cta": { "text": "PLACEHOLDER CTA", "href": "#verify-form" }
+      },
+      {
+        "number": "02",
+        "title": "PLACEHOLDER STEP 2 TITLE",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "cta": { "text": "PLACEHOLDER CTA", "href": "#verify-form" }
+      },
+      {
+        "number": "03",
+        "title": "PLACEHOLDER STEP 3 TITLE",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "cta": { "text": "PLACEHOLDER CTA", "href": "#verify-form" }
+      }
+    ]
   },
   "testimonial": {
-    "quote": "\u201CThe fear of withdrawal keeps more people sick than withdrawal itself ever could. We built our detox protocol specifically to change that.\u201D",
-    "author": "Mitchell Naficy, MD",
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation.",
+    "author": "John Doe 2",
     "role": "Medical Director"
   },
   "insuranceLogos": {
-    "heading": "Your Insurance Is Probably Already on This List",
-    "body": "Most PPO plans cover the full cost of treatment \u2014 and we\u2019ll confirm yours in minutes. Check your provider below, or call us and we\u2019ll walk you through exactly what you\u2019re covered for, at no cost and with no obligation.",
-    "providers": [
-      "Aetna", "BCBS Texas", "Cigna", "UnitedHealthcare",
-      "Anthem", "UMR", "GEHA", "Humana"
-    ]
+    "heading": "PLACEHOLDER INSURANCE HEADING",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "providers": ["Aetna", "BCBS", "Cigna", "UnitedHealthcare", "Anthem", "UMR", "GEHA"]
   },
   "accommodations": {
-    "heading1": "Imagine Waking Up and Not Needing It Anymore",
-    "body1": "That life exists. It\u2019s being lived right now by people who once felt exactly the way you do. We bridge the distance between where you are today and a life free from addiction \u2014 with compassionate therapy, peer support, and clinical care that actually works.",
-    "heading2": "Expert Care. Real Compassion. Zero Judgment.",
-    "body2": "Our therapists don\u2019t just treat symptoms \u2014 they get to know you. In a private, calming environment surrounded by people on the same path, you\u2019ll find that recovery isn\u2019t something that happens to you. It\u2019s something you build, with the right team beside you.",
+    "heading1": "PLACEHOLDER ACCOMMODATIONS HEADING 1",
+    "body1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.",
+    "heading2": "PLACEHOLDER ACCOMMODATIONS HEADING 2",
+    "body2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.",
     "ctaText": "Verify Your Insurance",
     "images": ["therapy-1.jpg", "therapy-2.jpg"]
   },
-  "facilities": [
-    {
-      "name": "Tru Dallas Detox",
-      "location": "Euless, TX",
-      "description": "From medically supervised detox to full residential care and aftercare, Tru Dallas handles every stage of recovery under one roof. Personalized treatment plans, 24/7 clinical support, and same-day admission \u2014 built for people who are ready.",
-      "image": "tru-dallas-detox-slide.jpg"
-    },
-    {
-      "name": "Maverick Behavioral Health",
-      "location": "DFW Area, TX",
-      "description": "Maverick was built around a simple belief: bold, individualized care changes lives. Their programs combine 1-on-1 therapy, dual diagnosis treatment, and luxury accommodations \u2014 designed for clients who need focused, private care without compromise.",
-      "image": "maverick-behavioral-health-slide.jpg"
-    },
-    {
-      "name": "Oceans Luxury Rehab",
-      "location": "South Florida",
-      "description": "Nestled on the shores of Orange County, Oceans offers an oceanfront setting where discreet, upscale detox and residential treatment meet a genuinely calming environment for healing. Private accommodations, gourmet dining, and 24/7 medical care \u2014 recovery with no corners cut.",
-      "image": "oceans_luxury_rehab_slide.jpg"
-    }
-  ],
+  "facilities": {
+    "heading": "PLACEHOLDER FACILITIES HEADING",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "items": [
+      {
+        "name": "Facility 1",
+        "location": "PLACEHOLDER CITY, STATE",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+        "image": "slider-1.jpg"
+      },
+      {
+        "name": "Facility 2",
+        "location": "PLACEHOLDER CITY, STATE",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+        "image": "slider-2.jpg"
+      },
+      {
+        "name": "Facility 3",
+        "location": "PLACEHOLDER CITY, STATE",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+        "image": "slider-3.jpg"
+      },
+      {
+        "name": "Facility 4",
+        "location": "PLACEHOLDER CITY, STATE",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+        "image": "slider-4.jpg"
+      }
+    ]
+  },
   "footer": {
     "certificationSeals": [
       {
@@ -161,6 +188,13 @@
     "legalLinkUrl": "/privacy-policy"
   },
   "breakTheAddiction": {
-    "image": "break-image.jpg"
+    "eyebrow": "PLACEHOLDER EYEBROW",
+    "heading": "PLACEHOLDER BREAK THE ADDICTION HEADING",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "break-image.jpg",
+    "amenities": ["Amenity 1", "Amenity 2", "Amenity 3", "Amenity 4", "Amenity 5", "Amenity 6"],
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.",
+    "quoteAuthor": "PLACEHOLDER AUTHOR",
+    "quoteTitle": "PLACEHOLDER TITLE"
   }
 }
