@@ -141,32 +141,24 @@
     }
   ],
   "footer": {
-    "certifications": [
-      "Licensed and Certified by:",
-      "The Joint Commission Accredited",
-      "LegitScript Certified",
-      "Adults 18+",
-      "All Major Insurance Accepted"
-    ],
-    "legalLinkText": "Privacy Policy & HIPAA Notice",
-    "legalLinkUrl": "/privacy-policy",
     "certificationSeals": [
       {
         "src": "jointcommission.webp",
         "alt": "Joint Commission Accredited",
-        "href": ""
+        "href": null,
+        "width": 100,
+        "height": 100
       },
       {
         "src": "45265114.png",
         "alt": "LegitScript Certified",
-        "href": "https://www.legitscript.com/websites/?checker_keywords=dallasdetox.com"
-      },
-      {
-        "src": "tx-dshs-logo-vertical_white.png",
-        "alt": "State Health Services",
-        "href": ""
+        "href": "https://legitscript.com/pharmacy/admissions.BRANDSLUG.com",
+        "width": 100,
+        "height": 100
       }
-    ]
+    ],
+    "legalLinkText": "Privacy Policy & HIPAA Notice",
+    "legalLinkUrl": "/privacy-policy"
   },
   "breakTheAddiction": {
     "image": "break-image.jpg"

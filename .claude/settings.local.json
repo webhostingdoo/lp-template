@@ -20,7 +20,8 @@
       "Bash(cd O:/AmityPB-LP && node -e \"const c = require\\('./src/data/site-config.json'\\); console.log\\('email:', c.brand.email\\); console.log\\('logos:', c.logos\\); console.log\\('facilities[0].name:', c.facilities[0].name\\); console.log\\('breakTheAddiction:', c.breakTheAddiction\\); console.log\\('providers:', c.insuranceLogos.providers\\);\")",
       "Bash(cd O:/AmityPB-LP && mv src/data/treatments.json src/data/pages.json)",
       "Bash(taskkill //F //IM node.exe 2>&1; cd O:/AmityPB-LP && rm -rf .next)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
