@@ -102,21 +102,21 @@
     "steps": [
       {
         "number": "01",
-        "title": "PLACEHOLDER STEP 1 TITLE",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "cta": { "text": "PLACEHOLDER CTA", "href": "#verify-form" }
+        "title": "See If You're 100% Covered",
+        "description": "We work with most major insurance providers. Our team handles the paperwork so you can focus on healing.",
+        "cta": { "text": "Check coverage now →", "href": "#verify-form" }
       },
       {
         "number": "02",
-        "title": "PLACEHOLDER STEP 2 TITLE",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "cta": { "text": "PLACEHOLDER CTA", "href": "#verify-form" }
+        "title": "Talk to Someone Who Actually Knows",
+        "description": "Connect with a compassionate intake coordinator who will listen to your story and answer all your questions privately.",
+        "cta": { "text": "Call (111) 111-1111 →", "href": "tel:+11111111111" }
       },
       {
         "number": "03",
-        "title": "PLACEHOLDER STEP 3 TITLE",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "cta": { "text": "PLACEHOLDER CTA", "href": "#verify-form" }
+        "title": "Your First Day of Real Recovery",
+        "description": "Arrive at our facility where our clinical team has prepared a personalized treatment plan specifically for you.",
+        "cta": { "text": "View Admissions Info →", "href": "#verify-form" }
       }
     ]
   },
