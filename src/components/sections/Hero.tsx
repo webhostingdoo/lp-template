@@ -16,8 +16,8 @@ export default function Hero(props: HeroProps) {
     supertitle = "SAME DAY ADMISSION",
     h1 = "Dallas Medical Detox & Rehab",
     paragraph = "We accept most private PPO plans. Get a confidential 5-minute benefits check and find out if your treatment is 100% covered — private rooms available.",
-    imageDesktop = "tdd-hero-desktop.jpg",
-    imageMobile = "tdd-hero-mobile.jpg",
+    imageDesktop = "hero-desktop.jpg",
+    imageMobile = "hero-mobile.jpg",
   } = props;
 
   return (
@@ -27,7 +27,7 @@ export default function Hero(props: HeroProps) {
         {/* Mobile image - shown below 768px */}
         <Image
           src={`/images/hero/${imageMobile}`}
-          alt="True Dallas Detox treatment center"
+          alt={`${config.brand.name} treatment center`}
           fill
           priority
           quality={85}
@@ -37,7 +37,7 @@ export default function Hero(props: HeroProps) {
         {/* Desktop image - shown at 768px and above */}
         <Image
           src={`/images/hero/${imageDesktop}`}
-          alt="True Dallas Detox treatment center"
+          alt={`${config.brand.name} treatment center`}
           fill
           priority
           quality={85}

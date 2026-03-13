@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     title: config.meta.defaultTitle,
     description: config.meta.defaultDescription,
-    images: ["/images/hero/tdd-hero-desktop.jpg"],
+    images: [`/images/hero/${config.hero.imageDesktop}`],
   },
 };
 

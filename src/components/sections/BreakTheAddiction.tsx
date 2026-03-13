@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import config from '@/data/site-config.json';
 
 const amenities = [
   {
@@ -76,7 +77,7 @@ export default function BreakTheAddiction(props: BreakTheAddictionProps) {
         {/* Two-column: image left, text right */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <Image
-            src="/images/gallery/tru-dallas-detox-reception.jpg"
+            src={`/images/gallery/${config.breakTheAddiction.image}`}
             alt="Insurance covered detox and addiction treatment"
             width={800}
             height={600}

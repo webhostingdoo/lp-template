@@ -1,3 +1,5 @@
+import config from '@/data/site-config.json';
+
 export default function PrivacyHero() {
   return (
     <section
@@ -10,7 +12,7 @@ export default function PrivacyHero() {
         </h1>
         <hr className="border-t-2 border-accent w-16 mt-6 mb-8" />
         <p className="text-white/75 text-lg max-w-2xl leading-relaxed">
-          Effective Date: April 21, 2025 &mdash; Tru Dallas Detox &amp; Recovery Center
+          Effective Date: April 21, 2025 &mdash; {config.brand.legalName}
         </p>
       </div>
     </section>

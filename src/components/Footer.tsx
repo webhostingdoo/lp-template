@@ -36,11 +36,14 @@ export default function Footer() {
 
         {/* Certification seals */}
         <div className="flex items-center gap-6 mb-10">
-          <Image src="/images/logos/jointcommission.webp" alt="Joint Commission Accredited" width={100} height={100} className="h-16 w-auto opacity-90" />
-          <a href="https://www.legitscript.com/websites/?checker_keywords=dallasdetox.com" target="_blank" rel="noopener noreferrer">
-            <Image src="/images/logos/45265114.png" alt="LegitScript Certified" width={100} height={100} className="h-16 w-auto opacity-90 hover:opacity-100 transition" />
-          </a>
-          <Image src="/images/logos/tx-dshs-logo-vertical_white.png" alt="Texas Department of State Health Services" width={100} height={100} className="h-16 w-auto opacity-90" />
+          {config.footer.certificationSeals.map((seal: { src: string; alt: string; href: string }, i: number) => {
+            const img = <Image key={i} src={`/images/logos/${seal.src}`} alt={seal.alt} width={100} height={100} className={`h-16 w-auto opacity-90${seal.href ? ' hover:opacity-100 transition' : ''}`} />;
+            return seal.href ? (
+              <a key={i} href={seal.href} target="_blank" rel="noopener noreferrer">{img}</a>
+            ) : (
+              img
+            );
+          })}
         </div>
 
         {/* Divider */}

@@ -5,7 +5,11 @@
     "phoneRaw": "+18669717393",
     "email": "info@dallasdetox.com",
     "address": "2219 West Euless Blvd Suite 200, Euless, TX 76040, United States",
-    "mapsUrl": ""
+    "mapsUrl": "",
+    "state": "TX",
+    "stateFullName": "Texas",
+    "domain": "https://admissions.dallasdetox.com",
+    "legalName": "Tru Dallas Detox & Recovery Center"
   },
   "colors": {
     "primary": "#0e2a47",
@@ -19,6 +23,10 @@
   "logos": {
     "nav": "tru_dallas_logo_nav.svg",
     "footer": "tru_dallas_logo_white.svg"
+  },
+  "hero": {
+    "imageDesktop": "hero-desktop.jpg",
+    "imageMobile": "hero-mobile.jpg"
   },
   "social": {
     "facebook": "",
@@ -141,6 +149,26 @@
       "All Major Insurance Accepted"
     ],
     "legalLinkText": "Privacy Policy & HIPAA Notice",
-    "legalLinkUrl": "/privacy-policy"
+    "legalLinkUrl": "/privacy-policy",
+    "certificationSeals": [
+      {
+        "src": "jointcommission.webp",
+        "alt": "Joint Commission Accredited",
+        "href": ""
+      },
+      {
+        "src": "45265114.png",
+        "alt": "LegitScript Certified",
+        "href": "https://www.legitscript.com/websites/?checker_keywords=dallasdetox.com"
+      },
+      {
+        "src": "tx-dshs-logo-vertical_white.png",
+        "alt": "State Health Services",
+        "href": ""
+      }
+    ]
+  },
+  "breakTheAddiction": {
+    "image": "break-image.jpg"
   }
 }
